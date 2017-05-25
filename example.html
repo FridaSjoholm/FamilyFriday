@@ -67,26 +67,16 @@
         border-bottom: 1px solid #000;
       }
       .rate-button {
-          height: 26px;
+          height: 30px;
           width: 30px;
           border-radius: 50%;
           overflow: hidden;
           background: #f7f145;
-          padding-top: 4px;
           text-align: center;
+          border: none;
       }
       .rate-button:hover {
           background: #f6f6f6;
-      }
-      .rate-button:active {
-          background: #adadad;
-      }
-      .rate-button:visited {
-          background: #adadad;
-      }
-      .rate-button a {
-        text-decoration: none;
-        color: black;
       }
     </style>
   </head>
@@ -106,7 +96,6 @@
                 <p>We are so glad you wanted to join us for last Family Friday, and hope you had an as amazing Friday as we did!</p>
               </td>
             </tr>
-
             <tr>
               <td>
                 <p>To continue improving these gatherings we would love to get some feedback on your experience, please click one of the buttons to rate the lunch at Pizza R Us</p>
@@ -115,39 +104,59 @@
                 <a href ="https://yelp.com/pizza-r-us"><img src="https://cdn.dribbble.com/users/60266/screenshots/1926787/ricos-quesos-pizza.jpg" alt="Pizza R Us" class="logo"></a>
               </td>
             </tr>
-
+            <!-- The buttons below will post to a databse, and there display a thank you message, as this is an example there is of course no database or thank you message  -->
             <tr>
               <td colspan="2">
                 <table class="rate-table">
                   <tr>
                     <td align="center" class="rate-area">
-                      <div class="rate-button">
-                        <a href="familyfriday.com/review?restaurant=Pizza R Us&department=operations&rating=1">1</a>
-                      </div>
+                      <form action="https://familyfriday.com/review" method="post">
+                        <input type="hidden" name="restaurant" value="Pizza R Us">
+                        <input type="hidden" name="team" value="operations">
+                        <input type="hidden" name="name" value="Maria">
+                        <input type="hidden" name="rating" value="1">
+                        <input type="submit" value="1" class="rate-button">
+                      </form>
                     </td>
 
                     <td align="center" class="rate-area">
-                      <div class="rate-button">
-                        <a href="familyfriday.com/review?restaurant=Pizza R Us&department=operations&rating=2">2</a>
-                      </div>
+                      <form action="https://familyfriday.com/review" method="post">
+                        <input type="hidden" name="restaurant" value="Pizza R Us">
+                        <input type="hidden" name="team" value="operations">
+                        <input type="hidden" name="name" value="Maria">
+                        <input type="hidden" name="rating" value="2">
+                        <input type="submit" value="2" class="rate-button">
+                      </form>
                     </td>
 
                     <td align="center" class="rate-area">
-                      <div class="rate-button">
-                        <a href="familyfriday.com/review?restaurant=Pizza R Us&department=operations&rating=3">3</a>
-                      </div>
+                      <form action="https://familyfriday.com/review" method="post">
+                        <input type="hidden" name="restaurant" value="Pizza R Us">
+                        <input type="hidden" name="team" value="operations">
+                        <input type="hidden" name="name" value="Maria">
+                        <input type="hidden" name="rating" value="3">
+                        <input type="submit" value="3" class="rate-button">
+                      </form>
                     </td>
 
                     <td align="center" class="rate-area">
-                      <div class="rate-button">
-                        <a href="familyfriday.com/review?restaurant=Pizza R Us&department=operations&rating=4">4</a>
-                      </div>
+                      <form action="https://familyfriday.com/review" method="post">
+                        <input type="hidden" name="restaurant" value="Pizza R Us">
+                        <input type="hidden" name="team" value="operations">
+                        <input type="hidden" name="name" value="Maria">
+                        <input type="hidden" name="rating" value="4">
+                        <input type="submit" value="4" class="rate-button">
+                      </form>
                     </td>
 
                     <td align="center" class="rate-area">
-                      <div class="rate-button">
-                        <a href="familyfriday.com/review?restaurant=Pizza R Us&department=operations&rating=5">5</a>
-                      </div>
+                      <form action="https://familyfriday.com/review" method="post">
+                        <input type="hidden" name="restaurant" value="Pizza R Us">
+                        <input type="hidden" name="team" value="operations">
+                        <input type="hidden" name="name" value="Maria">
+                        <input type="hidden" name="rating" value="5">
+                        <input type="submit" value="5" class="rate-button">
+                      </form>
                     </td>
                   </tr>
                 </table>
@@ -156,7 +165,7 @@
 
             <tr>
               <td colspan="2">
-                <p>We appreciate your help and hope that you and some of your friends from the operations team will join you next Friday as well.</p>
+                <p>We appreciate your help and hope that you and some of your friends from the operations team will join us next Friday as well.</p>
                 <h5>XOXO</h5>
                 <p>The Family Friday team</p>
               </td>

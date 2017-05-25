@@ -67,26 +67,16 @@
         border-bottom: 1px solid #000;
       }
       .rate-button {
-          height: 26px;
+          height: 30px;
           width: 30px;
           border-radius: 50%;
           overflow: hidden;
           background: #f7f145;
-          padding-top: 4px;
           text-align: center;
+          border: none;
       }
       .rate-button:hover {
           background: #f6f6f6;
-      }
-      .rate-button:active {
-          background: #adadad;
-      }
-      .rate-button:visited {
-          background: #adadad;
-      }
-      .rate-button a {
-        text-decoration: none;
-        color: black;
       }
     </style>
   </head>
@@ -114,39 +104,59 @@
                 <a href ="{{restaurant.yelp_link}}"><img src="{{restaurant.logo}}" alt="{{restaurant.name}}" class="logo"></a>
               </td>
             </tr>
-
+            <!-- The buttons below will post to a databse, and there display a thank you message, as this is an example there is of course no database or thank you message  -->
             <tr>
               <td colspan="2">
                 <table class="rate-table">
                   <tr>
                     <td align="center" class="rate-area">
-                      <div class="rate-button">
-                        <a href="familyfriday.com/review?restaurant={{restaurant.name}}&department={{member.team}}&rating=1">1</a>
-                      </div>
+                      <form action="https://familyfriday.com/review" method="post">
+                        <input type="hidden" name="restaurant" value="{{restaurant.name}}">
+                        <input type="hidden" name="team" value="{{member.team}}">
+                        <input type="hidden" name="name" value="{{member.name}}">
+                        <input type="hidden" name="rating" value="1">
+                        <input type="submit" value="1" class="rate-button">
+                      </form>
                     </td>
 
                     <td align="center" class="rate-area">
-                      <div class="rate-button">
-                        <a href="familyfriday.com/review?restaurant={{restaurant.name}}&department={{member.team}}&rating=2">2</a>
-                      </div>
+                      <form action="https://familyfriday.com/review" method="post">
+                        <input type="hidden" name="restaurant" value="{{restaurant.name}}">
+                        <input type="hidden" name="team" value="{{member.team}}">
+                        <input type="hidden" name="name" value="{{member.name}}">
+                        <input type="hidden" name="rating" value="2">
+                        <input type="submit" value="2" class="rate-button">
+                      </form>
                     </td>
 
                     <td align="center" class="rate-area">
-                      <div class="rate-button">
-                        <a href="familyfriday.com/review?restaurant={{restaurant.name}}&department={{member.team}}&rating=3">3</a>
-                      </div>
+                      <form action="https://familyfriday.com/review" method="post">
+                        <input type="hidden" name="restaurant" value="{{restaurant.name}}">
+                        <input type="hidden" name="team" value="{{member.team}}">
+                        <input type="hidden" name="name" value="{{member.name}}">
+                        <input type="hidden" name="rating" value="3">
+                        <input type="submit" value="3" class="rate-button">
+                      </form>
                     </td>
 
                     <td align="center" class="rate-area">
-                      <div class="rate-button">
-                        <a href="familyfriday.com/review?restaurant={{restaurant.name}}&department={{member.team}}&rating=4">4</a>
-                      </div>
+                      <form action="https://familyfriday.com/review" method="post">
+                        <input type="hidden" name="restaurant" value="{{restaurant.name}}">
+                        <input type="hidden" name="team" value="{{member.team}}">
+                        <input type="hidden" name="name" value="{{member.name}}">
+                        <input type="hidden" name="rating" value="4">
+                        <input type="submit" value="4" class="rate-button">
+                      </form>
                     </td>
 
                     <td align="center" class="rate-area">
-                      <div class="rate-button">
-                        <a href="familyfriday.com/review?restaurant={{restaurant.name}}&department={{member.team}}&rating=5">5</a>
-                      </div>
+                      <form action="https://familyfriday.com/review" method="post">
+                        <input type="hidden" name="restaurant" value="{{restaurant.name}}">
+                        <input type="hidden" name="team" value="{{member.team}}">
+                        <input type="hidden" name="name" value="{{member.name}}">
+                        <input type="hidden" name="rating" value="5">
+                        <input type="submit" value="5" class="rate-button">
+                      </form>
                     </td>
                   </tr>
                 </table>
