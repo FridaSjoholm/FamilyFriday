@@ -2,11 +2,7 @@ var minimist = require('minimist');
 var Handlebars = require('handlebars');
 var fs = require('fs');
 
-console.log(process.argv);
-
 var argv = minimist(process.argv.slice(2));
-
-console.log(argv);
 
 if (argv['_'].length < 2) {
   console.log('Usage: \n $ node generate_email.js <template.html> <config.json>');
@@ -16,9 +12,6 @@ if (argv['_'].length < 2) {
 var template_source = fs.readFileSync(argv['_'][0], 'utf8');
 var config = JSON.parse(fs.readFileSync(argv['_'][1], 'utf8'));
 
-console.log('Config:', config);
-console.log('Template:', template_source);
-
 for (i = 0; i < config.members.length; i++) {
   var memberSpecificConfig = {
     member: config.members[i],
@@ -26,6 +19,8 @@ for (i = 0; i < config.members.length; i++) {
   };
   var template = Handlebars.compile(template_source);
   var html = template(memberSpecificConfig);
-
+  console.log("********************************************************************")
+  console.log("************************* Email for ********************************")
+  console.log("************************* " + config.members[i].email )
   console.log(html);
 }
