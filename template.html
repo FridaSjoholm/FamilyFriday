@@ -3,49 +3,99 @@
   <head>
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link href="https://fonts.googleapis.com/css?family=League+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sonsie+One" rel="stylesheet">
     <title>Family Fridays!</title>
     <style>
+    body {
+      background-color: #f6f6f6;
+      font-family: sans-serif;
+      -webkit-font-smoothing: antialiased;
+      font-size: 14px;
+      line-height: 1.4;
+      margin: 0;
+      padding: 0;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%; }
+
+      table {
+      border-collapse: separate;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+      /*for outlooks automatially added styling on tables */
+      width: 100%;
+      }
+
+      table td {
+        font-family: sans-serif;
+        font-size: 14px;
+        vertical-align: top;
+      }
+      /* centers the container with content, and sets a max-width ()*/
+      .container {
+        background-color: #fff;
+        display: block;
+        margin: 10px auto !important;
+        max-width: 580px;
+        width: 580px;
+      }
+
+      h1 {
+        color: #000;
+        font-family: 'Sonsie One', cursive;
+        margin: 20px;
+      }
+      .header {
+        background-color: #f7f145;
+        padding:10px;
+      }
+      .content {
+        padding: 10px;
+      }
+
     </style>
   </head>
   <body class="">
-    <table border="0" cellpadding="0" cellspacing="0" class="body">
-
-      <tr>
+    <table border="0" cellpadding="0" cellspacing="0" class="container">
+      <tr class="header">
         <td>
-          <p>Hi {{member.name}}! </p>
-          <p>We are so glad you wanted to join us for last family friday, and hope you had an as amazing friday as we did!</p>
-          <p>To continue improving these gatherings we would love to get some feedback on your experience,
-            please click one of the links to rate the lunch at {{restaurant.name}}</p>
+          <h1> Family Friday</h1>
         </td>
       </tr>
-
       <tr>
         <td>
-          <table>
+          <table class="content">
             <tr>
-              <td> <a href="familyfriday.com/review?restaurant={{restaurant.name}}&department={{member.team}}&rating=1">1</a> </td>
-              <td> <a href="familyfriday.com/review?restaurant={{restaurant.name}}&department={{member.team}}&rating=2">2</a> </td>
-              <td> <a href="familyfriday.com/review?restaurant={{restaurant.name}}&department={{member.team}}&rating=3">3</a> </td>
-              <td> <a href="familyfriday.com/review?restaurant={{restaurant.name}}&department={{member.team}}&rating=4">4</a> </td>
-              <td> <a href="familyfriday.com/review?restaurant={{restaurant.name}}&department={{member.team}}&rating=1">5</a> </td>
+              <td class>
+                <p>Hi {{member.name}}! </p>
+                <p>We are so glad you wanted to join us for last family friday, and hope you had an as amazing friday as we did!</p>
+                <p>To continue improving these gatherings we would love to get some feedback on your experience,
+                  please click one of the links to rate the lunch at {{restaurant.name}}</p>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <table>
+                  <tr>
+                    <td> <a href="familyfriday.com/review?restaurant={{restaurant.name}}&department={{member.team}}&rating=1">1</a> </td>
+                    <td> <a href="familyfriday.com/review?restaurant={{restaurant.name}}&department={{member.team}}&rating=2">2</a> </td>
+                    <td> <a href="familyfriday.com/review?restaurant={{restaurant.name}}&department={{member.team}}&rating=3">3</a> </td>
+                    <td> <a href="familyfriday.com/review?restaurant={{restaurant.name}}&department={{member.team}}&rating=4">4</a> </td>
+                    <td> <a href="familyfriday.com/review?restaurant={{restaurant.name}}&department={{member.team}}&rating=1">5</a> </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <p>We appreciate your help and hope that you and some of your friends fromt the {{member.team}} team will join you next friday as well.</p>
+                <h5>XOXO</h5>
+                <p>The Family friday team</p>
+              </td>
             </tr>
           </table>
         </td>
       </tr>
-
-      <tr>
-        <td>
-          <p>We appreciate your help and hope that you and some of your friends fromt the {{member.team}} team will join you next friday as well.</p>
-          <h5>XOXO</h5>
-          <p>The Family friday team</p>
-        </td>
-      </tr>
     </table>
   </body>
-
-
-
-
-
-<!-- #f7f145 -->
