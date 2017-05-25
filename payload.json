@@ -1,0 +1,24 @@
+{
+    "members": [
+        {
+            "email": "jill@mycompany.com",
+            "name": "Jill",
+            "team": "engineering"
+        },
+        {
+            "email": "rohit@mycompany.com",
+            "name": "Rohit",
+            "team": "finance"
+        },
+        {
+            "email": "maria@mycompany.com",
+            "name": "Maria",
+            "team": "operations"
+        }
+    ],
+    "restaurant": {
+        "logo": "https://cdn.dribbble.com/users/60266/screenshots/1926787/ricos-quesos-pizza.jpg",
+        "name": "Pizza R Us",
+        "yelp_link": "https://yelp.com/pizza-r-us"
+    }
+}

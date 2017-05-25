@@ -1,0 +1,19 @@
+{
+  "name": "family_friday_email",
+  "version": "1.0.0",
+  "description": "Template for email going out to memebers dining together on fridays",
+  "main": "generate_email.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "handlebars": "^4.0.10",
+    "jasmine": "^2.6.0",
+    "minimist": "^1.2.0"
+  },
+  "devDependencies": {
+    "jasmine": "^2.6.0"
+  }
+}
