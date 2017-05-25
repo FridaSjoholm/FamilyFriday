@@ -56,7 +56,38 @@
         display: inline-block;
         width: 100px;
       }
-
+      /*Button styling*/
+      .rate-table {
+        border-collapse: collapse;
+      }
+      .rate-area {
+        margin: 20px 0;
+        padding: 10px;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+      }
+      .rate-button {
+          height: 26px;
+          width: 30px;
+          border-radius: 50%;
+          overflow: hidden;
+          background: #f7f145;
+          padding-top: 4px;
+          text-align: center;
+      }
+      .rate-button:hover {
+          background: #f6f6f6;
+      }
+      .rate-button:active {
+          background: #adadad;
+      }
+      .rate-button:visited {
+          background: #adadad;
+      }
+      .rate-button a {
+        text-decoration: none;
+        color: black;
+      }
     </style>
   </head>
   <body class="">
@@ -71,14 +102,13 @@
           <table class="content">
             <tr>
               <td colspan="2">
-                <p>Hi {{member.name}}! </p>
-                <p>We are so glad you wanted to join us for last family friday, and hope you had an as amazing friday as we did!</p>
+                <h5>Hi {{member.name}}! </h5>
+                <p>We are so glad you wanted to join us for last Family Friday, and hope you had an as amazing Friday as we did!</p>
               </td>
             </tr>
-
             <tr>
               <td>
-                <p>To continue improving these gatherings we would love to get some feedback on your experience, please click one of the links to rate the lunch at {{restaurant.name}}</p>
+                <p>To continue improving these gatherings we would love to get some feedback on your experience, please click one of the buttons to rate the lunch at {{restaurant.name}}</p>
               </td>
               <td>
                 <a href ="{{restaurant.yelp_link}}"><img src="{{restaurant.logo}}" alt="{{restaurant.name}}" class="logo"></a>
@@ -87,13 +117,37 @@
 
             <tr>
               <td colspan="2">
-                <table>
+                <table class="rate-table">
                   <tr>
-                    <td> <a href="familyfriday.com/review?restaurant={{restaurant.name}}&department={{member.team}}&rating=1">1</a> </td>
-                    <td> <a href="familyfriday.com/review?restaurant={{restaurant.name}}&department={{member.team}}&rating=2">2</a> </td>
-                    <td> <a href="familyfriday.com/review?restaurant={{restaurant.name}}&department={{member.team}}&rating=3">3</a> </td>
-                    <td> <a href="familyfriday.com/review?restaurant={{restaurant.name}}&department={{member.team}}&rating=4">4</a> </td>
-                    <td> <a href="familyfriday.com/review?restaurant={{restaurant.name}}&department={{member.team}}&rating=1">5</a> </td>
+                    <td align="center" class="rate-area">
+                      <div class="rate-button">
+                        <a href="familyfriday.com/review?restaurant={{restaurant.name}}&department={{member.team}}&rating=1">1</a>
+                      </div>
+                    </td>
+
+                    <td align="center" class="rate-area">
+                      <div class="rate-button">
+                        <a href="familyfriday.com/review?restaurant={{restaurant.name}}&department={{member.team}}&rating=2">2</a>
+                      </div>
+                    </td>
+
+                    <td align="center" class="rate-area">
+                      <div class="rate-button">
+                        <a href="familyfriday.com/review?restaurant={{restaurant.name}}&department={{member.team}}&rating=3">3</a>
+                      </div>
+                    </td>
+
+                    <td align="center" class="rate-area">
+                      <div class="rate-button">
+                        <a href="familyfriday.com/review?restaurant={{restaurant.name}}&department={{member.team}}&rating=4">4</a>
+                      </div>
+                    </td>
+
+                    <td align="center" class="rate-area">
+                      <div class="rate-button">
+                        <a href="familyfriday.com/review?restaurant={{restaurant.name}}&department={{member.team}}&rating=5">5</a>
+                      </div>
+                    </td>
                   </tr>
                 </table>
               </td>
@@ -101,9 +155,9 @@
 
             <tr>
               <td colspan="2">
-                <p>We appreciate your help and hope that you and some of your friends fromt the {{member.team}} team will join you next friday as well.</p>
+                <p>We appreciate your help and hope that you and some of your friends from the {{member.team}} team will join you next Friday as well.</p>
                 <h5>XOXO</h5>
-                <p>The Family friday team</p>
+                <p>The Family Friday team</p>
               </td>
             </tr>
           </table>
