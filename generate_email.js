@@ -1,4 +1,5 @@
 var minimist = require('minimist');
+var Handlebars = require('handlebars');
 var fs = require('fs');
 
 console.log(process.argv);
@@ -17,3 +18,14 @@ var config = JSON.parse(fs.readFileSync(argv['_'][1], 'utf8'));
 
 console.log('Config:', config);
 console.log('Template:', template_source);
+
+for (i = 0; i < config.members.length; i++) {
+  var memberSpecificConfig = {
+    member: config.members[i],
+    restaurant: config.restaurant
+  };
+  var template = Handlebars.compile(template_source);
+  var html = template(memberSpecificConfig);
+
+  console.log(html);
+}
