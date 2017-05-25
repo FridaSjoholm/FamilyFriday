@@ -16,8 +16,11 @@ This email Works well in many big marketing services like MailChimp, but in some
 
 I've chosen not to do that because separating css and html makes it easier to work with for all parties
 
+#### Links
+As this is merely an example, none of the links are gonna work.
+
 ## Tests
 ---
-(to be updated)
+To run tests, run `jasmine`
 
 > By: Frida Sjöholm

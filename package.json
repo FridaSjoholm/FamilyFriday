@@ -10,6 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "handlebars": "^4.0.10",
+    "jasmine": "^2.6.0",
     "minimist": "^1.2.0"
+  },
+  "devDependencies": {
+    "jasmine": "^2.6.0"
   }
 }
